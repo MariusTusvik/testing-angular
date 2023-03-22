@@ -1,0 +1,19 @@
+<!-- <div class="burger-menu">
+   
+    <button class="burger-menu-toggle" (click)="toggleMenu()">
+        <img src="../../assets/burger-menu.svg" alt="" class="icons">
+    </button>
+    <ul class="burger-menu-items">
+        <li><a href="/">Menu Item 1</a></li>
+        <li><a href="#">Menu Item 2</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+    </ul>
+</div> -->
+
+<nav>
+    <button type="button" (click)="toggleMenu()">Toggle Open/Close</button>
+</nav>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
