@@ -1,1 +1,6 @@
-<p>front-page works!</p>
+<mat-form-field>
+<input type="email" matInput required placeholder="Email" name="email" formControlName="email" />
+<mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+  <mat-error *ngIf="email.errors.required">Email is required</mat-error>
+  <mat-error *ngIf="email.errors.email">Email is invalid</mat-error>
+</mat-form-field>

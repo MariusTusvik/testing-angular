@@ -7,7 +7,9 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ import {MatInputModule} from '@angular/material/input'; 
+ import {MatFormFieldModule} from '@angular/material/form-field'; 
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

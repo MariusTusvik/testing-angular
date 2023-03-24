@@ -1,20 +1,22 @@
-<!-- <div class="burger-menu">
-   
-    <button class="burger-menu-toggle" (click)="toggleMenu()">
-        <img src="../../assets/burger-menu.svg" alt="" class="icons">
-    </button>
+
+
+<div class="burger-menu">
+<button class="burger-menu-toggle" (click)="toggleMenu()">
+    <div *ngIf="isOpen">
+        <img src="../../assets/close.svg" alt="" class="icons">
+    </div>
+    <div *ngIf="!isOpen">
+        <img src="../../assets/burger-menu.svg" alt="" class="icons"/>
+    </div>
+</button>
+<div *ngIf="isOpen">
+
     <ul class="burger-menu-items">
         <li><a href="/">Menu Item 1</a></li>
         <li><a href="#">Menu Item 2</a></li>
         <li><a href="#">Menu Item 3</a></li>
     </ul>
-</div> -->
-
-<nav>
-    <button type="button" (click)="toggleMenu()">Toggle Open/Close</button>
-</nav>
-
-<div *ngIf="isOpen">
+</div>
 
 </div>
 
