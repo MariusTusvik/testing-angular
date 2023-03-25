@@ -1,25 +1,33 @@
-
-    <div class="body">
-        <div class="nav">
-            <img src="../../assets/logo.png" alt="" class="logo">
-            <app-burger-menu class="phone"></app-burger-menu>
-            <div class="nav-links desktop">
-                <a href="">
-                    <img src="../../assets/search.svg" alt="" class="icons">
-                </a>
-                <a routerLink="/home" routerLinkActive="active">Home</a>
-                <a routerLink="/shop" routerLinkActive="active">Shop</a>
-                <a routerLink="/categories" routerLinkActive="active">Categories</a>
-                <a routerLink="/buy-now" routerLinkActive="active">Buy Now</a>
-            </div>
-            <div class="nav-right desktop">
-                <img src="../../assets/heart.svg" alt="" class="icons">
-                <div class="cart">
-                    <img src="../../assets/shop.svg" alt="" class="icons">
-                    <p>Cart</p>
-                </div>
-                <a href="/login" class="login">Login</a>
-                 
-            </div>
-         </div>
+<div class="bg-primairy">
+  <div class="mx-auto flex w-full max-w-7xl justify-between py-8">
+    <div class="flex items-center">
+      <img src="../../assets/logo.png" alt="" class="mr-16 object-contain" />
+      <div class="flex items-center gap-x-16 text-lg text-gray">
+        <a class="" href="/">
+          <mat-icon fontIcon="search" class="icons" />
+        </a>
+        <a routerLink="/home" routerLinkActive="active" class="w-fit">Home</a>
+        <a routerLink="/shop" routerLinkActive="active" class="w-fit">Shop</a>
+        <a routerLink="/categories" routerLinkActive="active" class="w-fit"
+          >Categories</a
+        >
+        <a routerLink="/buy-now" routerLinkActive="active" class="w-fit"
+          >Buy Now</a
+        >
+      </div>
     </div>
+
+    <div class="flex items-center gap-x-12 text-gray align-middle">
+      <mat-icon fontIcon="favorite-border" />
+      <a class="flex items-center gap-4">
+        <mat-icon fontIcon="shopping-bag" />
+        <p>Cart</p>
+      </a>
+      <a
+        href="/login"
+        class="rounded-lg bg-blue px-14 py-3 font-medium text-white"
+        >Login</a
+      >
+    </div>
+  </div>
+</div>

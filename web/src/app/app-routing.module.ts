@@ -5,12 +5,10 @@ import { FrontPageComponent } from './front-page/front-page.component';
 
 
 const routes: Routes = [
-  { path: '', component: FrontPageComponent},  
+  { path: '', component: FrontPageComponent},
 ];
 
 @NgModule({
-  declarations: [
-   ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

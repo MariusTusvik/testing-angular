@@ -7,12 +7,14 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
   styleUrls: ['./front-page.component.scss']
 })
 export class FrontPageComponent {
-  email = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+ PCs = [
+    {name: 'Pro 14"', specs: 'Apple m1 Pro islemci', specs2: "16 GB RAM / 512 GB SSD", img: "../../assets/laptop-frontveiw.png"},
+    {name: 'Pro 16"', specs: 'Apple m1 Pro islemci', specs2: "16 GB RAM / 512 GB SSD", img: "../../assets/laptop-frontveiw.png"},
+    {name: 'Pro 13"', specs: 'Apple m1 Pro islemci', specs2: "16 GB RAM / 512 GB SSD", img: "../../assets/laptop-frontveiw.png"},
+    {name: 'Pro 15"', specs: 'Apple m1 Pro islemci', specs2: "16 GB RAM / 512 GB SSD", img: "../../assets/laptop-frontveiw.png"},
+    {name: 'Pro 17"', specs: 'Apple m1 Pro islemci', specs2: "16 GB RAM / 512 GB SSD", img: "../../assets/laptop-frontveiw.png"},
+    {name: 'Pro 18"', specs: 'Apple m1 Pro islemci', specs2: "16 GB RAM / 512 GB SSD", img: "../../assets/laptop-frontveiw.png"},
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
+ ]
+
   }

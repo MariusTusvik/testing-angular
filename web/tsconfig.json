@@ -18,8 +18,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "paths": {
-       "@assets/*": ["assets/*"], 
-       "@components/*": ["app/components/*"], 
+       "@assets/*": ["app/assets/*"], 
      },
     "module": "ES2022",
     "useDefineForClassFields": false,
