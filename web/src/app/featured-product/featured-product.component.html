@@ -1,12 +1,22 @@
-<div class="my-36 mx-auto grid max-w-7xl grid-cols-3">
-  <div
-    class="mx-8 mb-16 flex flex-col justify-center"
-    *ngFor="let item of shuffledItems | slice : 0 : limit"
-  >
-    <img src="{{ item.img }}" alt="" class="mb-10 h-72 object-contain" />
-    <p class="mb-2 text-blue">Apple</p>
-    <p class="mb-6 text-xl font-medium">Apple Macbook {{ item.name }}</p>
-    <p class="text-gray">{{ item.specs }}</p>
-    <p class="text-gray">{{ item.specs2 }}</p>
+<div
+  class="mx-8 mb-16 flex flex-col justify-center"
+  *ngFor="let item of shuffledItems | slice : 0 : limit"
+>
+  <img src="{{ item.img }}" alt="" class="mb-10 h-72 object-contain" />
+  <p class="mb-2 text-blue" *ngif="showInfo">Apple</p>
+  <p class="mb-6 text-xl font-medium">
+    Apple Macbook {{ item.name }}
+    <mat-icon *ngif="showFeature" fontIcon="info" class="ml-6 text-blue" />
+  </p>
+  <p class="text-gray" *ngif="showFeature">{{ item.specs }}</p>
+  <p class="text-gray" *ngif="showFeature">{{ item.specs2 }}</p>
+  <p class="mb-20 text-gray" *ngif="showInfo">
+    {{ item.description }}
+  </p>
+  <div *ngif="showInfo">
+    <a href="/" class="flex items-center font-medium text-blue" *ngif="showRedirect">
+      Buy Now <mat-icon fontIcon="east" class="ml-2" />
+    </a>
+
   </div>
 </div>

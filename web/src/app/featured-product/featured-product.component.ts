@@ -6,6 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./featured-product.component.scss'],
 })
 export class FeaturedProductComponent {
+  @Input() showRedirect: boolean = true;
+  @Input() limit: number = 1;
+  @Input() showInfo: boolean = false;
+  @Input() showFeature: boolean = false;
   constructor(private mockMacbooks: MacbooksService) {}
   get macbooks() {
     return this.mockMacbooks.mockMacbooks;
@@ -13,6 +17,4 @@ export class FeaturedProductComponent {
 
   get shuffledItems(): any[] {
     return this.macbooks.sort(() => Math.random() - 0.5);
-  }
-  @Input() limit: number = 1;
-}
+  }}
