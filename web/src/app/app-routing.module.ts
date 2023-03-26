@@ -2,14 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FrontPageComponent } from './front-page/front-page.component';
 
-
-
-const routes: Routes = [
-  { path: '', component: FrontPageComponent},
-];
+const routes: Routes = [{ path: '', component: FrontPageComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes , {scrollPositionRestoration: 'enabled'} )],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

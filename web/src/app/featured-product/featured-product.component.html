@@ -1,9 +1,12 @@
 <div class="my-36 mx-auto grid max-w-7xl grid-cols-3">
-    <div class="mx-8 mb-16 flex flex-col justify-center" *ngFor="let item of shuffledItems | slice:0:limit">
-        <img src="{{ item.img }}" alt="" class="mb-10 h-72 object-contain" />
-        <p class="mb-2 text-blue">Apple</p>
-        <p class="mb-6 text-xl font-medium">Apple Macbook {{ item.name }}</p>
-        <p class="text-gray">{{ item.specs }}</p>
-        <p class="text-gray">{{ item.specs2 }}</p>
-    </div>
+  <div
+    class="mx-8 mb-16 flex flex-col justify-center"
+    *ngFor="let item of shuffledItems | slice : 0 : limit"
+  >
+    <img src="{{ item.img }}" alt="" class="mb-10 h-72 object-contain" />
+    <p class="mb-2 text-blue">Apple</p>
+    <p class="mb-6 text-xl font-medium">Apple Macbook {{ item.name }}</p>
+    <p class="text-gray">{{ item.specs }}</p>
+    <p class="text-gray">{{ item.specs2 }}</p>
+  </div>
 </div>

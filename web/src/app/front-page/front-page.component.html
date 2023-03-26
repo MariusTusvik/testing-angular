@@ -3,7 +3,7 @@
 <div class="bg-primairy">
   <div class="mx-auto max-w-5xl py-28">
     <img
-      src="../../assets/dual-laptop.png"
+      src="../../assets/macbook2.png"
       alt=""
       class="mx-auto mb-24 h-[25rem] object-contain"
     />
@@ -12,7 +12,9 @@
       <p class="mb-8 text-gray">
         The Power of 16" Retina Display and M2 Pro Processor
       </p>
-      <app-buy-now />
+      <div class="flex w-full items-center justify-center">
+        <app-buy-now />
+      </div>
     </div>
   </div>
 </div>
@@ -24,7 +26,7 @@
     Choose the model that suits you
   </p>
   <div class="grid w-full grid-cols-2 divide-x-2 divide-gray">
-    <app-product-with-info *ngFor="let item of [1, 2]" />
+    <app-product-with-info [limit]="2"/>
   </div>
 </div>
 

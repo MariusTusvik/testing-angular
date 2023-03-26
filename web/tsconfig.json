@@ -18,15 +18,11 @@
     "importHelpers": true,
     "target": "ES2022",
     "paths": {
-       "@assets/*": ["app/assets/*"], 
-     },
+      "@assets/*": ["app/assets/*"]
+    },
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
-   
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

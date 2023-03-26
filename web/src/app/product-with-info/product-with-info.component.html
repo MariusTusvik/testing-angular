@@ -1,11 +1,16 @@
-<div class="mx-8 flex flex-col justify-start">
-    <img src="../../assets/laptop-frontveiw.png" alt="" class="mb-20 h-72 object-contain" />
-        <p class="mb-8 text-2xl font-semibold flex items-center">MacBook Air M2 <mat-icon fontIcon="info" class="text-blue ml-6" *ngIf="showInfo" />
-</p>
-    <p class="mb-20 text-gray">
-        Parmesan ipsum ranch bacon mozzarella burnt onions Aussie. lorem ipsum
-        dummy text of the printing and typesetting industry. Lorem Ipsum bacon
-        mozzarella burnt onions Aussie. lorem ipsum dummy text of the printing
-    </p>
-    <app-buy-now />
+<div class="mx-8 flex flex-col justify-start"     *ngFor="let item of shuffledItems | slice : 0 : limit"
+>
+  <img
+    src={{item.img}}
+    alt=""
+    class="mb-20 h-72 object-contain"
+  />
+  <p class="mb-8 flex items-center text-2xl font-semibold">
+    {{item.name}} <mat-icon fontIcon="info" class="ml-6 text-blue" />
+  </p>
+  <p class="mb-20 text-gray">
+    {{item.description}}
+  </p>
+
+  <app-buy-now ngif="showRedirect" />
 </div>
