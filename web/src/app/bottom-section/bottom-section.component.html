@@ -1,0 +1,45 @@
+<div class="mx-auto my-36 grid max-w-7xl grid-cols-2 items-center gap-x-12">
+  <div
+    class="flex flex-col items-center rounded-3xl bg-primairy px-16 py-24 text-2xl"
+  >
+    <img
+      src="../../assets/multiple-laptop.png"
+      alt=""
+      class="mb-20 h-80 w-fit object-contain"
+    />
+    <p class="mb-2">Sign up for our e-mail list,</p>
+    <p class="mb-6 font-semibold">don't miss the discounts</p>
+    <form class="flex max-w-[18rem] flex-row flex-nowrap">
+      <div>
+        <input
+          type="email"
+          placeholder="e-mail"
+          [formControl]="email"
+          class="focus:border-blue-500 w-full rounded-xl border border-gray bg-transparent py-1 px-8 text-left text-gray focus:bg-white focus:outline-none"
+        />
+        <div>
+          <mat-error *ngIf="email.hasError('email')">{{
+            emailError
+          }}</mat-error>
+        </div>
+      </div>
+      <button (click)="submit()" class="ml-2 rounded-md text-blue">
+        <mat-icon>east</mat-icon>
+      </button>
+    </form>
+  </div>
+
+  <div class="mx-28 flex flex-col justify-start">
+    <img
+      src="../../assets/laptop-frontveiw.png"
+      alt=""
+      class="mb-16 h-72 w-fit object-contain"
+    />
+    <p class="mb-8 text-2xl font-semibold">MacBook Air M2</p>
+    <p class="mb-20 text-gray">
+      Parmesan ipsum ranch bacon mozzarella burnt onions Aussie. lorem ipsum
+      dummy text of the printing and typesetting industry. Lorem Ipsum bacon
+      mozzarella burnt onions Aussie. lorem ipsum dummy text of the printing
+    </p>
+  </div>
+</div>

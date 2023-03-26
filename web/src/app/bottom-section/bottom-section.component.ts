@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  selector: 'app-bottom-section',
+  templateUrl: './bottom-section.component.html',
+  styleUrls: ['./bottom-section.component.scss'],
 })
-export class FooterComponent {
+export class BottomSectionComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
   emailError = '* Invalid email';
   submit() {

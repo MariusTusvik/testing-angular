@@ -11,7 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatIconModule} from '@angular/material/icon';
-import { BuyNowComponent } from './buy-now/buy-now.component'; 
+import { BuyNowComponent } from './buy-now/buy-now.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { BottomSectionComponent } from './bottom-section/bottom-section.component';
+import { FeaturedProductComponent } from './featured-product/featured-product.component';
+import { ProductWithInfoComponent } from './product-with-info/product-with-info.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,10 @@ import { BuyNowComponent } from './buy-now/buy-now.component';
     FooterComponent,
     BurgerMenuComponent,
     BuyNowComponent,
+    ScrollToTopComponent,
+    BottomSectionComponent,
+    FeaturedProductComponent,
+    ProductWithInfoComponent,
 
   ],
   imports: [
@@ -30,6 +39,8 @@ import { BuyNowComponent } from './buy-now/buy-now.component';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

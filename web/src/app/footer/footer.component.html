@@ -1,0 +1,92 @@
+<div class="bg-primairy">
+  <div class="mx-auto max-w-7xl pt-14 pb-24">
+    <div class="mb-12 grid grid-cols-3 items-center justify-between gap-40">
+      <div class="mb-8">
+        <img
+          src="../../assets/logo-blue.png"
+          alt=""
+          class="mb-12 h-10 object-contain"
+        />
+        <p class="gray mb-10 max-w-[15rem] text-sm">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat..
+        </p>
+        <form class="flex max-w-[18rem] flex-row flex-nowrap">
+          <div>
+            <input
+              type="email"
+              placeholder="e-mail"
+              [formControl]="email"
+              class="focus:border-blue-500 w-full rounded-xl border border-gray bg-transparent py-1 px-8 text-left text-gray focus:bg-white focus:outline-none"
+            />
+            <div>
+              <mat-error *ngIf="email.hasError('email')">{{
+                emailError
+              }}</mat-error>
+            </div>
+          </div>
+          <button (click)="submit()" class="ml-2 rounded-md text-gray">
+            <mat-icon>east</mat-icon>
+          </button>
+        </form>
+      </div>
+
+      <div class="grid grid-cols-2 gap-20">
+        <div class="space-y-3">
+          <p class="mb-4 text-xl font-semibold">Quick Menu</p>
+          <p>Products</p>
+          <p>Shop</p>
+          <p>Blog</p>
+          <p>Buy Now</p>
+          <p>Favorites</p>
+          <p>Cart</p>
+        </div>
+        <div class="space-y-3">
+          <p class="mb-4 text-xl font-semibold">About</p>
+          <p>About Us</p>
+          <p>Careers</p>
+          <p>Privacy Policy</p>
+          <p>FAQs</p>
+        </div>
+      </div>
+
+      <div>
+        <div
+          *ngFor="let item of [1, 2, 3]; let i = index"
+          class="mb-4 flex items-center justify-center"
+        >
+          <div class="border-r-2 border-gray px-4 text-center text-xl">
+            <p class="font-semibold">27</p>
+            <p class="font-thin">Oct</p>
+          </div>
+          <div class="px-4 text-left">
+            <p>Jank And Jonas orijinal, ürünleri artik geldniz</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between border-t-2 border-gray pt-12">
+      <div class="flex gap-12 text-gray">
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+      </div>
+      <div class="flex gap-x-2">
+        <img
+          src="../../assets/facebook.png"
+          class="h-8 w-12 object-contain text-blue"
+        />
+        <img
+          src="../../assets/facebook.png"
+          class="h-8 w-12 object-contain text-blue"
+        />
+        <img
+          src="../../assets/facebook.png"
+          class="h-8 w-12 object-contain text-blue"
+        />
+      </div>
+    </div>
+  </div>
+</div>

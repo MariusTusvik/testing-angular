@@ -1,3 +1,5 @@
+<app-scroll-to-top></app-scroll-to-top>
+
 <div class="bg-primairy">
   <div class="mx-auto max-w-5xl py-28">
     <img
@@ -22,23 +24,7 @@
     Choose the model that suits you
   </p>
   <div class="grid w-full grid-cols-2 divide-x-2 divide-gray">
-    <div
-      class="mx-8 flex flex-col justify-start"
-      *ngFor="let item of [1, 2]; let i = index"
-    >
-      <img
-        src="../../assets/laptop-frontveiw.png"
-        alt=""
-        class="mb-20 h-72 object-contain"
-      />
-      <p class="mb-8 text-2xl font-semibold">MacBook Air M2</p>
-      <p class="mb-20 text-gray">
-        Parmesan ipsum ranch bacon mozzarella burnt onions Aussie. lorem ipsum
-        dummy text of the printing and typesetting industry. Lorem Ipsum bacon
-        mozzarella burnt onions Aussie. lorem ipsum dummy text of the printing
-      </p>
-      <app-buy-now />
-    </div>
+    <app-product-with-info *ngFor="let item of [1, 2]" />
   </div>
 </div>
 
@@ -62,15 +48,7 @@
 
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<div class="my-36 mx-auto grid max-w-7xl grid-cols-3">
-  <div class="mx-8 mb-16 flex flex-col justify-center" *ngFor="let item of PCs">
-    <img src="{{ item.img }}" alt="" class="mb-10 h-72 object-contain" />
-    <p class="mb-2 text-blue">Apple</p>
-    <p class="mb-6 text-xl font-medium">Apple Macbook {{ item.name }}</p>
-    <p class="text-gray">{{ item.specs }}</p>
-    <p class="text-gray">{{ item.specs2 }}</p>
-  </div>
-</div>
+<app-featured-product [limit]="6"></app-featured-product>
 
 <!-- -------------------------------------------------------------------------------------------------- -->
 
@@ -100,31 +78,4 @@
 
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<div class="mx-auto my-36 grid max-w-7xl grid-cols-2 items-center gap-x-12">
-  <div class="flex flex-col items-center rounded-3xl bg-primairy p-16 text-2xl">
-    <img
-      src="../../assets/multiple-laptop.png"
-      alt=""
-      class="mb-20 h-80 w-fit object-contain"
-    />
-    <p class="mb-2">Sign up for our e-mail list,</p>
-    <p class="mb-8 font-semibold">don't miss the discounts</p>
-    <div class="flex w-full items-center justify-center">
-     
-    </div>
-  </div>
-
-  <div class="mx-28 flex flex-col justify-start">
-    <img
-      src="../../assets/laptop-frontveiw.png"
-      alt=""
-      class="mb-16 h-72 w-fit object-contain"
-    />
-    <p class="mb-8 text-2xl font-semibold">MacBook Air M2</p>
-    <p class="mb-20 text-gray">
-      Parmesan ipsum ranch bacon mozzarella burnt onions Aussie. lorem ipsum
-      dummy text of the printing and typesetting industry. Lorem Ipsum bacon
-      mozzarella burnt onions Aussie. lorem ipsum dummy text of the printing
-    </p>
-  </div>
-</div>
+<app-bottom-section />
