@@ -1,7 +1,5 @@
 <app-scroll-to-top></app-scroll-to-top>
 
-<app-loading></app-loading>
-
 <div class="bg-primairy">
   <div class="mx-auto max-w-5xl py-28">
     <img
@@ -26,6 +24,11 @@
   </div>
 </div>
 
+<div class="flex gap-x-4 mx-auto w-full justify-center mt-20">
+  <button class="bg-blue rounded px-4 py-2 text-white"routerLink="/tabs" [queryParams]="{tabIndex: 0}"> Tab 1</button>
+  <button class="bg-blue rounded px-4 py-2 text-white" routerLink="/tabs" [queryParams]="{tabIndex: 1}">Tab 2</button>
+  <button class="bg-blue rounded px-4 py-2 text-white" routerLink="/tabs" [queryParams]="{tabIndex: 2}">Tab 3</button>
+</div>
 <!-- -------------------------------------------------------------------------------------------------- -->
 
 <div class="mx-auto my-36 max-w-5xl">

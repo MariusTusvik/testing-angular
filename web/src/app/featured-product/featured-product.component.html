@@ -4,27 +4,26 @@
 >
   <img src="{{ item.img }}" alt="" class="mb-10 h-72 object-contain" />
   <div *ngIf="showFeature">
-    <p class="mb-2 text-blue" >Apple</p>
+    <p class="mb-2 text-blue">Apple</p>
   </div>
-  <div class="mb-6 text-xl font-medium flex">
+  <div class="mb-6 flex text-xl font-medium">
     Apple Macbook {{ item.name }}
-   <div *ngIf="showInfo" class="ml-6 text-blue">
-      <mat-icon  fontIcon="info"  />
+    <div *ngIf="showInfo" class="ml-6 text-blue">
+      <mat-icon fontIcon="info" />
     </div>
   </div>
   <div *ngIf="showFeature">
     <p class="text-gray">{{ item.specs }}</p>
     <p class="text-gray">{{ item.specs2 }}</p>
   </div>
-  
-<div *ngIf="showInfo">
-  <p class="mb-20 text-gray">{{ item.description }}  </p>
+
+  <div *ngIf="showInfo">
+    <p class="mb-20 text-gray">{{ item.description }}</p>
   </div>
- 
- <div *ngIf="showInfo">
-    <a href="/" class="flex items-center font-medium text-blue" >
+
+  <div *ngIf="showInfo">
+    <a href="/" class="flex items-center font-medium text-blue">
       Buy Now <mat-icon fontIcon="east" class="ml-2" />
     </a>
-
-  </div> 
+  </div>
 </div>

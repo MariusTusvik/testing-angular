@@ -15,4 +15,5 @@ export class NavbarComponent {
   get menuOpenClass() {
     return this.menuOpen ? 'menu-open' : '';
   }
+  home = 'Home';
 }
