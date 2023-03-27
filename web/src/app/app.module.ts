@@ -16,6 +16,7 @@ import { BottomSectionComponent } from './bottom-section/bottom-section.componen
 import { FeaturedProductComponent } from './featured-product/featured-product.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ShopComponent } from './shop/shop.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ShopComponent } from './shop/shop.component';
     FeaturedProductComponent,
     CategoriesComponent,
     ShopComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
