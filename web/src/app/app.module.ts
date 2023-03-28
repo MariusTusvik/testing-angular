@@ -17,6 +17,8 @@ import { FeaturedProductComponent } from './featured-product/featured-product.co
 import { CategoriesComponent } from './categories/categories.component';
 import { ShopComponent } from './shop/shop.component';
 import { LoadingComponent } from './loading/loading.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { LoadingComponent } from './loading/loading.component';
     CategoriesComponent,
     ShopComponent,
     LoadingComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { LoadingComponent } from './loading/loading.component';
     MatFormFieldModule,
     MatIconModule,
     ReactiveFormsModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
