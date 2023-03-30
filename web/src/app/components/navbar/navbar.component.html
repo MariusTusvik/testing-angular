@@ -4,16 +4,33 @@
       <a href="" class="mr-16">
         <img src="../../assets/logo.png" alt="" />
       </a>
-      <div class="flex items-center gap-x-16 text-lg text-gray">
+      <div class="flex items-center gap-x-16 text-lg font-semibold text-gray">
         <a class="" href="/">
           <mat-icon fontIcon="search" class="icons" />
         </a>
-        <a routerLink="/" routerLinkActive="active" class="w-fit">Home</a>
-        <a routerLink="/shop" routerLinkActive="active" class="w-fit">Shop</a>
-        <a routerLink="/categories" routerLinkActive="active" class="w-fit"
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ excact: true }"
+          class="w-fit hover:text-blue/70"
+          >Home</a
+        >
+        <a
+          routerLink="/shop"
+          routerLinkActive="active"
+          class="w-fit hover:text-blue/70"
+          >Shop</a
+        >
+        <a
+          routerLink="/categories"
+          routerLinkActive="active"
+          class="w-fit hover:text-blue/70"
           >Categories</a
         >
-        <a routerLink="/buy-now" routerLinkActive="active" class="w-fit"
+        <a
+          routerLink="/video"
+          routerLinkActive="active"
+          class="w-fit hover:text-blue/70"
           >Videos and Sound</a
         >
       </div>

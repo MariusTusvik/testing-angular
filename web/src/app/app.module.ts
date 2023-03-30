@@ -19,6 +19,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { VideoComponent } from './pages/video/video.component';
 import { TabsComponent } from './pages/tabs/tabs.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { LogInComponent } from './pages/log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     ShopComponent,
     VideoComponent,
     TabsComponent,
+    LogInComponent,
   ],
   imports: [
     BrowserModule,
