@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
 })
 export class VideoComponent {
   videoUrl: string = 'assets/advertisement.mp4';
-
   audioUrl: string = 'assets/advertisement-audio.mp3';
 }

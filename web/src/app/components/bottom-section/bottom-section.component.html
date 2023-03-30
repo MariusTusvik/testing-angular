@@ -18,7 +18,9 @@
           class="focus:border-blue-500 w-full rounded-xl border border-gray bg-transparent py-1 px-8 text-left text-gray focus:bg-white focus:outline-none"
         />
         <div>
-          <mat-error *ngIf="email.hasError('email')"> {{emailError}} </mat-error>
+          <mat-error *ngIf="email.hasError('email')">
+            {{ emailError }}
+          </mat-error>
         </div>
       </div>
       <button (click)="submit()" class="ml-2 rounded-md text-blue">
@@ -28,6 +30,11 @@
   </div>
 
   <div class="mx-auto max-w-sm">
-    <app-featured-product [showRedirect]="false" [limit]="1" [showInfo]="true" [showRedirect]="false"/>
+    <app-featured-product
+      [showRedirect]="false"
+      [limit]="1"
+      [showInfo]="true"
+      [showRedirect]="false"
+    />
   </div>
 </div>

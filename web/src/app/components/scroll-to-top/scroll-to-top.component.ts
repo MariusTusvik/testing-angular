@@ -9,8 +9,8 @@ export class ScrollToTopComponent {
   scrollToTop() {
     let top = document.getElementById('top');
     if (top !== null) {
-      top.scrollIntoView({ behavior: 'smooth'});
+      top.scrollIntoView({ behavior: 'smooth' });
       top = null;
     }
-  } 
+  }
 }

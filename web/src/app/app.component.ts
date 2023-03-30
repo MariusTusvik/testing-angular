@@ -10,10 +10,10 @@ export class AppComponent {
   ngOnInit(): void {
     // Hide the loading spinner once the page has finished loading
     document.onreadystatechange = () => {
-      if (document.readyState === "complete") {
-        const spinner = document.getElementById("loading-spinner");
+      if (document.readyState === 'complete') {
+        const spinner = document.getElementById('loading-spinner');
         if (spinner) {
-          spinner.style.display = "none";
+          spinner.style.display = 'none';
         }
       }
     };

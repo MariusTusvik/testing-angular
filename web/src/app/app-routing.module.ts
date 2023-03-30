@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CategoriesComponent } from './categories/categories.component';
-import { FrontPageComponent } from './front-page/front-page.component';
-import { TabsComponent } from './tabs/tabs.component';
-import { VideoComponent } from './video/video.component';
-import { ShopComponent } from './shop/shop.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { FrontPageComponent } from './pages/front-page/front-page.component';
+import { TabsComponent } from './pages/tabs/tabs.component';
+import { VideoComponent } from './pages/video/video.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 const routes: Routes = [
   { path: '', component: FrontPageComponent },
@@ -15,9 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

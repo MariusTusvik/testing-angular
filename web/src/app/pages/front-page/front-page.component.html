@@ -13,10 +13,7 @@
         The Power of 16" Retina Display and M2 Pro Processor
       </p>
       <div class="flex w-full items-center justify-center">
-        <a
-          href="/"
-          class="flex items-center font-medium text-blue"
-        >
+        <a href="/" class="flex items-center font-medium text-blue">
           Buy Now <mat-icon fontIcon="east" class="ml-2" />
         </a>
       </div>
@@ -25,10 +22,28 @@
 </div>
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<div class="flex gap-x-6 mx-auto w-fit mt-20">
-  <button class="bg-blue rounded-xl px-16 py-8 text-white text-2xl font-semibold"routerLink="/tabs" [queryParams]="{tabIndex: 0}"> Tab 1</button>
-  <button class="bg-blue rounded-xl px-16 py-8 text-white text-2xl font-semibold" routerLink="/tabs" [queryParams]="{tabIndex: 1}">Tab 2</button>
-  <button class="bg-blue rounded-xl px-16 py-8 text-white text-2xl font-semibold" routerLink="/tabs" [queryParams]="{tabIndex: 2}">Tab 3</button>
+<div class="mx-auto mt-20 flex w-fit gap-x-6">
+  <button
+    class="rounded-xl bg-blue px-16 py-8 text-2xl font-semibold text-white"
+    routerLink="/tabs"
+    [queryParams]="{ tabIndex: 0 }"
+  >
+    Tab 1
+  </button>
+  <button
+    class="rounded-xl bg-blue px-16 py-8 text-2xl font-semibold text-white"
+    routerLink="/tabs"
+    [queryParams]="{ tabIndex: 1 }"
+  >
+    Tab 2
+  </button>
+  <button
+    class="rounded-xl bg-blue px-16 py-8 text-2xl font-semibold text-white"
+    routerLink="/tabs"
+    [queryParams]="{ tabIndex: 2 }"
+  >
+    Tab 3
+  </button>
 </div>
 <!-- -------------------------------------------------------------------------------------------------- -->
 
@@ -65,7 +80,7 @@
 
 <app-featured-product
   [limit]="6"
-  class="grid grid-cols-3 max-w-7xl mx-auto"
+  class="mx-auto grid max-w-7xl grid-cols-3"
   [showFeature]="true"
 ></app-featured-product>
 
@@ -77,7 +92,7 @@
     *ngFor="let item of [1, 2]; let i = index"
     [ngClass]="i === 1 ? 'bg-transparent' : ''"
   >
-    <div class="mb-10 w-full text-start text-3xl font-bold flex">
+    <div class="mb-10 flex w-full text-start text-3xl font-bold">
       <mat-icon
         [fontIcon]="i === 1 ? 'home' : 'lock'"
         class="scale-300 pr-14 pl-5"

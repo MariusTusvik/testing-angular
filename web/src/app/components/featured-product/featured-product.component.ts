@@ -1,5 +1,6 @@
-import { MacbooksService } from '../macbooks.service';
 import { Component, Input } from '@angular/core';
+import { MacbooksService } from 'app/macbooks.service';
+
 @Component({
   selector: 'app-featured-product',
   templateUrl: './featured-product.component.html',
@@ -17,4 +18,5 @@ export class FeaturedProductComponent {
 
   get shuffledItems(): any[] {
     return this.macbooks.sort(() => Math.random() - 0.5);
-  }}
+  }
+}
