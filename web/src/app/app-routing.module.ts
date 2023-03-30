@@ -10,8 +10,15 @@ import { LogInComponent } from './pages/log-in/log-in.component';
 const routes: Routes = [
   { path: '', component: FrontPageComponent },
   { path: 'video', component: VideoComponent },
-  { path: 'tabs', component: TabsComponent },
-  { path: 'shop', component: ShopComponent },
+  { path: 'shop/tabs', component: TabsComponent },
+  {
+    path: 'shop',
+    component: ShopComponent,
+    data: { breadcrumb: 'shop' },
+    children: [
+      { path: 'tabs', data: { breadcrumb: 'tabs' }, component: TabsComponent },
+    ],
+  },
   { path: 'categories', component: CategoriesComponent },
   { path: 'login', component: LogInComponent },
 ];

@@ -1,5 +1,9 @@
-<mat-tab-group [selectedIndex]="tabIndex">
-  <mat-tab label="Tab 1">Tab 1 content</mat-tab>
-  <mat-tab label="Tab 2">Tab 2 content</mat-tab>
-  <mat-tab label="Tab 3">Tab 3 content</mat-tab>
-</mat-tab-group>
+<div class="mx-auto my-20 max-w-5xl">
+  <div class="bg-primairy">
+    <mat-tab-group [selectedIndex]="tabIndex">
+      <mat-tab label="Tab 1" bodyClass="bg-variant pt-20" mat-tab-label-disabled-background-color="bg-red-500"> <app-bottom-section></app-bottom-section></mat-tab>
+      <mat-tab label="Tab 2" bodyClass="bg-variant pt-20"><app-footer></app-footer></mat-tab>
+      <mat-tab label="Tab 3" bodyClass="bg-variant pt-20"><app-featured-product [limit]="2"/></mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

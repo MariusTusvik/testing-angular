@@ -20,6 +20,7 @@ import { VideoComponent } from './pages/video/video.component';
 import { TabsComponent } from './pages/tabs/tabs.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { LogInComponent } from './pages/log-in/log-in.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LogInComponent } from './pages/log-in/log-in.component';
     VideoComponent,
     TabsComponent,
     LogInComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     BrowserModule,
