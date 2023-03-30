@@ -6,12 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./scroll-to-top.component.scss'],
 })
 export class ScrollToTopComponent {
- /*  scrollToTop() {
-    // Hack: Scrolls to top of Page after page view initialized
+  scrollToTop() {
     let top = document.getElementById('top');
     if (top !== null) {
-      top.scrollIntoView();
+      top.scrollIntoView({ behavior: 'smooth'});
       top = null;
     }
-  } */
+  } 
 }

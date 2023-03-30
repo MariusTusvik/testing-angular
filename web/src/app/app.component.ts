@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +6,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web';
+
+  ngOnInit(): void {
+    // Hide the loading spinner once the page has finished loading
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        const spinner = document.getElementById("loading-spinner");
+        if (spinner) {
+          spinner.style.display = "none";
+        }
+      }
+    };
+  }
 }

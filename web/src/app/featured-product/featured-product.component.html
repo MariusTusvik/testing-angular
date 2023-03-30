@@ -21,7 +21,7 @@
     <p class="mb-20 text-gray">{{ item.description }}</p>
   </div>
 
-  <div *ngIf="showInfo">
+  <div *ngIf="showInfo && showRedirect" >
     <a href="/" class="flex items-center font-medium text-blue">
       Buy Now <mat-icon fontIcon="east" class="ml-2" />
     </a>
