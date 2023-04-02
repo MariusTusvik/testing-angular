@@ -21,6 +21,14 @@ import { TabsComponent } from './pages/tabs/tabs.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from 'environments/enviroment';
+import 'firebase/app';
 
 @NgModule({
   declarations: [
@@ -37,6 +45,7 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
     TabsComponent,
     LogInComponent,
     BreadcrumbsComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +56,10 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
     MatIconModule,
     ReactiveFormsModule,
     MatTabsModule,
+    FormsModule,
+    MatSnackBarModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],

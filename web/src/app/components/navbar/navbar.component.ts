@@ -16,4 +16,9 @@ export class NavbarComponent {
     return this.menuOpen ? 'menu-open' : '';
   }
   home = 'Home';
+
+  isLoggedIn = false;
+  currentUser: any;
+  
+
 }

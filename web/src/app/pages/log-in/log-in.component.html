@@ -1,1 +1,43 @@
-<p>log-in works!</p>
+<div class="flex h-screen max-h-screen flex-col items-center justify-center">
+  <button
+    (click)="goBack()"
+    class="absolute top-8 right-14 rounded-2xl bg-blue py-4 px-12 text-white"
+  >
+    Back
+  </button>
+  <div class="mx-auto w-full max-w-sm rounded bg-primairy py-8 px-4">
+    <p class="mb-3 text-center text-2xl">Log in</p>
+    <form (ngSubmit)="onLogin()">
+      <div class="flex flex-col">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" />
+      </div>
+      <div class="flex flex-col">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+        />
+      </div>
+      <button
+        type="submit"
+        class="mt-4 w-full rounded-2xl bg-blue py-2 text-white"
+      >
+        Log in
+      </button>
+    </form>
+  </div>
+
+  <div class="mx-auto mt-2 w-full max-w-sm rounded bg-primairy py-8 px-4 text-center">
+    <p>Dont have an account?</p>
+    <div class="flex justify-center">
+        <a
+          routerLink="/signup"
+          class="font-medium text-blue"
+          >Sign up</a
+        >
+    </div>
+  </div>
+</div>

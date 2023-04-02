@@ -42,11 +42,23 @@
         <mat-icon fontIcon="shopping-bag" />
         <p>Cart</p>
       </a>
-      <a
-        href="/login"
-        class="rounded-lg bg-blue px-14 py-3 font-medium text-white"
-        >Login</a
-      >
+
+
+      <div *ngIf="isLoggedIn">
+        <p>Welcome, {{ currentUser.email }}</p>
+        <p>UID: {{ currentUser.uid }}</p>
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <a
+          href="/login"
+          class="rounded-lg bg-blue px-14 py-3 font-medium text-white"
+          >Login</a
+        >
+      </div>
+
+
+
+
     </div>
   </div>
 </div>
