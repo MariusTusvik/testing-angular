@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { auth } from 'environments/enviroment';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
   styleUrls: ['./log-in.component.scss'],
 })
-export class LogInComponent {
+export class LogInComponent implements OnInit {
   constructor(
     private location: Location,
     private snackbar: MatSnackBar,
@@ -28,7 +28,7 @@ export class LogInComponent {
     this.snackbar.open('Invalid Credentials', 'Dismiss', {
       duration: 3000,
     });
-  }
+  } 
 
   isLoggedIn = false;
   currentUser: any;
@@ -49,18 +49,17 @@ export class LogInComponent {
         console.log('invalid credentials');
         return;
       }
-      const result = await signInWithEmailAndPassword(
-        auth,
+      const result =  this.afAuth.signInWithEmailAndPassword(
         this.email,
         this.password
       );
       this.isLoggedIn = true;
-      this.currentUser = result.user;
+      this.currentUser = result;
       console.log('result', result);
     } catch (error) {
       console.log(error);
-      this.showSnackbar();
-    }
+/*       this.showSnackbar();
+ */    }
   }
 }
 

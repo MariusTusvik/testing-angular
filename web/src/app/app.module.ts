@@ -27,8 +27,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { environment } from 'environments/enviroment';
-import 'firebase/app';
 
 @NgModule({
   declarations: [
@@ -45,7 +43,7 @@ import 'firebase/app';
     TabsComponent,
     LogInComponent,
     BreadcrumbsComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,8 +56,8 @@ import 'firebase/app';
     MatTabsModule,
     FormsModule,
     MatSnackBarModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireModule,
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
