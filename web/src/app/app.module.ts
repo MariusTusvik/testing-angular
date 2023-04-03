@@ -22,6 +22,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +42,7 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
     TabsComponent,
     LogInComponent,
     BreadcrumbsComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +53,8 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
     MatIconModule,
     ReactiveFormsModule,
     MatTabsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
